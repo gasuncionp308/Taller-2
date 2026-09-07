@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #FF5964;
+    --secondary-color: #35A7FF;
+    --accent-color: #FFE66D;
+    --dark-color: #2E2D4D;
+    --light-color: #F7F9FC;
+
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --border-radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    background-color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(46, 45, 77, 0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+}
+
+.nav-link-cta {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.hero {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--spacing-md) var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.badge {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.25rem var(--spacing-sm);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+}
+
+.btn-accent {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.hero-image img {
+    border-radius: var(--border-radius);
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.menu-section h2, .features-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(46, 45, 77, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    flex-grow: 1;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-top: auto;
+}
+
+.features-section {
+    background-color: var(--accent-color);
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.feature-item {
+    background-color: var(--light-color);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+}
+
+.cta-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+}
+
+.cta-card {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    padding: var(--spacing-md) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.cta-form input {
+    padding: 0.8rem var(--spacing-sm);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-sm);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .cta-form input {
+        width: 60%;
+    }
+}
+
+@media (min-width: 900px) {
+    .hero {
+        padding: var(--spacing-lg);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .menu-section, .features-section, .cta-section {
+        padding: var(--spacing-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cta-card {
+        padding: var(--spacing-lg);
+    }
+}
